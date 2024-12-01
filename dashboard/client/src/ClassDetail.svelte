@@ -18,12 +18,13 @@
         body: JSON.stringify(payload),
       });
       if (res.status !== 200) {
-        throw new String(`Error: request failed with HTTP status ${res.status}: ${res.body}`);
+        throw new Error(`Error: request failed with HTTP status ${res.status}: ${res.body}`);
       }
 
       curClass.running = action === 'start';
     } catch (err) {
-      alert(err);
+      console.error(err);
+      alert(err instanceof Error ? err.message : err);
     }
     isLoading.set(false);
   }
@@ -58,7 +59,10 @@
     <h4 class="d-inline">{curClass.name}</h4>
   </div>
 </div>
-<p class="pt-3 text-muted">{curClass.description}</p>
+<p class="pt-3 text-muted">
+  <!-- eslint-disable-next-line svelte/no-at-html-tags -->
+  {@html curClass.description}
+</p>
 
 {#if curClass.yt_recording_url}
   <iframe
@@ -76,7 +80,7 @@
     width="100%"
     height="100%"
     class="flex-grow-1"
-    src="https://www.youtube.com/embed/HShkFvjHPjw?si=91yBH7dC-uB85dKr"
+    src="https://www.youtube.com/embed/HShkFvjHPjw?si=SD9QTP6_i-VSC7rf"
     title="BSY class Live Stream"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"

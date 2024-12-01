@@ -45,11 +45,13 @@
 | playground-net | `172.20.0.10`  | Challenge [Famous Quotes LFI](./../challenges/famous-quotes-lfi/)   |
 | playground-net | `172.20.0.30`  | Challenge [What's the date?](./../challenges/what-is-the-date/)     |
 | playground-net | `172.20.0.35`  | Challenge [What's that noise?](./../challenges/what-is-that-noise/) |
- | playground-net | `172.20.0.39`  | Callenge [Shockwave Report](./../challenges/shockwave-report)       |
- | playground-net | `172.20.0.41`  | Callenge [Intrusion](./../challenges/intrusion)                     |
- | playground-net | `172.20.0.45`  | Callenge [Jump Around](./../challenges/jump-around)                 |
- | playground-net | `172.20.0.47`  | Callenge [Jump Around](./../challenges/jump-around)                 |
- | playground-net | `172.20.0.49`  | Callenge [Jump Around](./../challenges/jump-around)                 |
+ | playground-net | `172.20.0.39`  | Challenge [Shockwave Report](./../challenges/shockwave-report)      |
+ | playground-net | `172.20.0.41`  | Challenge [Intrusion](./../challenges/intrusion)                    |
+ | playground-net | `172.20.0.45`  | Challenge [Jump Around](./../challenges/jump-around)                |
+ | playground-net | `172.20.0.47`  | Challenge [Jump Around](./../challenges/jump-around)                |
+ | playground-net | `172.20.0.49`  | Challenge [Jump Around](./../challenges/jump-around)                |
+ | playground-net | `172.20.0.67`  | Challenge [Leet Messenger](./../challenges/leet-messenger)          |
+ | playground-net | `172.20.0.52`  | Challenge [Cybernet](./../challenges/cybernet)                      |
  | playground-net | `172.20.0.88`  | [Class02](./../classes/class02)                                     |                                                
  | playground-net | `172.20.0.90`  | [Class03](./../classes/class03)                                     |                                                
  | playground-net | `172.20.0.95`  | [Class03](./../classes/class03)                                     |  
@@ -59,8 +61,21 @@
 | playground-net | `172.20.0.110` | [Class07](./../classes/class07)                                     |
 | playground-net | `172.20.0.115` | [Class08](./../classes/class08)                                     |
 | playground-net | `172.20.0.120` | [Class09](./../classes/class09)                                     |
+| playground-net | `172.20.0.125` | [Class10](./../classes/class10)                                     |
+| playground-net | `172.20.0.130` | [Class10](./../classes/class10)                                     |
+| playground-net | `172.20.0.131` | [Class10](./../classes/class10)                                     |
+| playground-net | `172.20.0.132` | [Class10](./../classes/class10)                                     |
 
 ## Testing
 
 To run all tests, use script `run_tests.sh`. The script starts the lab, fires up all challenges and runs all existing `auto-solve.sh` scripts from within the hackerlab container.
 
+
+
+## Code quality
+
+We use linters and auto formatters to maintain code quality in this repository.
+Currently, this is only the case for the dashboard (client and server).
+Please refer to the READMEs in the respective directories for instructions.
+
+When introducing new code for challenges or classes, we recommend following the same guidelines.
